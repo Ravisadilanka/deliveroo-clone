@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput} from 'react-native'
+import { View, Text, Image, TextInput, ScrollView} from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { fontScale } from 'nativewind'
 import { useNavigation } from '@react-navigation/native'
@@ -15,9 +15,8 @@ const HomeScreen = () => {
     }, [])
     return (
         <SafeAreaView className='bg-white pt-5'>
-                <Text className='text-red-500'>
                     {/* header */}
-                    <View className='flex flex-1 flex-row pb-3 items-center mx-4 space-x-2'>
+                    <View className='flex-row pb-3 items-center mx-4 space-x-2 px-4'>
                         <Image 
                             source={require('../assets/Images/kemal.jpg')}
                             className='h-7 w-7 bg-gray-300 p-4 rounded-full'
@@ -35,7 +34,7 @@ const HomeScreen = () => {
                     </View>
 
                     {/* search */}
-                    <View className='flex-row items-center space-x-2 pb-2 mx-4'>
+                    <View className='flex-row items-center space-x-2 pb-2 mx-4 px-4'>
                         <View className='flex-row flex-1 space-x-2 bg-gray-200 p-3'>
                             <MagnifyingGlassIcon color='gray' size={20}/>
                             <TextInput 
@@ -46,7 +45,12 @@ const HomeScreen = () => {
 
                         <AdjustmentsVerticalIcon color='#00CCBB'/>
                     </View>
-                </Text>
+
+                    {/* Body */}
+                    <ScrollView>
+                        {/* Categories */}
+                        {/* Featured */}
+                    </ScrollView>
         </SafeAreaView>
   )
 }
